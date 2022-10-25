@@ -1,0 +1,9 @@
+.fondo {
+    background: linear-gradient(to right, rgb(29, 17, 203), rgba(37, 117, 252, 1));
+    height: 100%;
+    width: 100%;
+    position: absolute; 
+}
+.experiencia{
+  text-align: center;
+}

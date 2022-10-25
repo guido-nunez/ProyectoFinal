@@ -1,0 +1,60 @@
+<div class="" *ngIf="persona">
+    <div class="row">
+        <section class="vh-100 fondo">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-xl-10">
+                        <div class="card" style="border-radius: 1rem;">
+                            <div class="row g-0">
+                                <div class="col-md-12 col-lg-12 d-flex align-items-center">
+                                    <div class="card-body p-4 p-lg-5 text-black tarjeta">
+
+                                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                                            <div class="form-group estudios">
+                                                <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                                <span class="h1 fw-bold mb-0 ">Editar Perfil</span>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <label for="nombre">Nombre</label>
+                                                <input type="text" class="form-control" id="nombre" name="nombre"
+                                                    [(ngModel)]="persona.nombre" required>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <label for="apellido">Apellido</label>
+                                                <input type="text" class="form-control" id="apellido" name="apellido"
+                                                    [(ngModel)]="persona.apellido" required>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <label for="descripcion">Descripcion</label>
+                                                <input type="text" class="form-control" id="descripcion"
+                                                    name="descripcion" [(ngModel)]="persona.descripcion" required>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <label for="img">Foto de perfil</label>
+                                                <input type="file" class="form-control" id="apellido" name="img"
+                                                    (change)="uploadImage($event)"
+                                                    accept=".jpg, .jpeg, .png">
+                                            </div>
+                                            <div class="imagen">
+                                                <img [src]="imageService.url" width="200px">
+                                            </div>
+
+                                            <div class="pt-1 mb-4">
+                                                <button class="btn btn-primary">
+                                                    Editar Perfil
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

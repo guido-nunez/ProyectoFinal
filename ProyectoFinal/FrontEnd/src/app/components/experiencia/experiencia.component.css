@@ -1,9 +1,44 @@
 .row{
-    padding: 20px;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 div{
     background: #a1b5cb;
 }
+.cont{
+    box-shadow: 0 3px 4px 2px #0000004d;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 2px solid rgb(52, 95, 131);
+}
+.cont2{
+    box-shadow: 0 3px 4px 2px #0000004d;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.new{
+    margin-top: 10px;
+}
+.color{
+    background-color: #76a2d1;
+}
+.color2{
+    background-color: #4682b4;
+}
 h1, h3{
     display: inline;
+}
+#descripcion{
+    padding-top: 21.5px;
+    text-align:left;
+}
+#expe{
+    text-align:left;
+}
+#edit{
+    text-align:right;
+}
+#delete{
+    text-align:right;
 }

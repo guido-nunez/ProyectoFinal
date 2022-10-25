@@ -1,25 +1,96 @@
 <div class="row">
+    <div class="h-100 color p-4 rounded-3 cont">
     <h1>Educacion</h1>
-    <div class="col-lg-11">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+    <div class="h-100 p-4 color2 cont2">
+    <div class="col-lg-11 color2">
+        <button type="button" class="btn btn-dark new" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educacion
         </button>
+
+        <!-- Button trigger modal -->
+        <div class="col-lg-11 color2" id="cert">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+    Certificados
+  </button>
+</div>
     </div>
 
+  <!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="miModalLabel">Certificados</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://drive.google.com/file/d/1syRXpVO9BHEZkMZQtuP8Pf_g6vc5R0qh/view?usp=sharing" target=”_blank”><img src="../../../assets/ingles6.jpg" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><strong>Certificado de ingles B2</strong></h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://drive.google.com/file/d/1SDGukBSc_cFpgNpYt34Rg1MlUJzMcJ2-/view?usp=sharing" target=”_blank”><img src="../../../assets/ingles5.jpg" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>Certificado de ingles B1+</b></h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://mumuki.io/argentina-programa/certificates/verify/tuAWoh3sPAbb1dBn" target=”_blank”><img src="../../../assets/mumuki.jpg" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><b>ARGENTINA PROGRAMA 2021</b></h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <a href="https://drive.google.com/file/d/1hz9Y7JpDGCh9CwISy--aloaMkv13np4e/view?usp=sharing" target=”_blank”><img src="../../../assets/unla.jpg" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5><b>estudiante regular universidad UNLA</b></h5>
+            </div>
+          </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">CERRAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="col lg 1"></div>
-    <div class="col-lg-11">
+    <div class="col-lg-11 color2">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
-                    <td>
+                    <td id="edu">
                         <h2>{{Educacion.nombreE}}</h2>
                     </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
+                    <td id="descripcion">{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged" id="edit">
                         <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
-                    <td *ngIf="isLogged">
+                    <td *ngIf="isLogged" id="delete">
                         <button class="btn btn-danger" (click)="delete(Educacion.id)">
                             <i class="bi bi-trash3-fill"></i> BORRAR</button>
                     </td>
@@ -27,5 +98,6 @@
             </tbody>
         </table>
     </div>
-
+</div>
+</div>
 </div>
