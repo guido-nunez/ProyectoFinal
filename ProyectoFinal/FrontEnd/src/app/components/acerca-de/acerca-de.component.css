@@ -8,8 +8,7 @@ div{
     text-align: center;
 }
 h1{
-    margin-bottom: 25px;
-    margin-top: 10px;
+    margin-bottom: 26px;
 }
 button{
     margin-top: 15px;
@@ -84,6 +83,5 @@ button{
     background-color: #4682b4;
 }
 #parrafo{
-    margin: 15px;
-    margin-bottom: 25px;
+    margin: 10px;
 }

@@ -2,13 +2,13 @@
     <div class="h-100 color p-4 rounded-3 cont">
     <h1>Educacion</h1>
     <div class="h-100 p-4 color2 cont2">
-    <div class="col-lg-12 color2">
+    <div class="col-lg-11 color2">
         <button type="button" class="btn btn-dark new" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educacion
         </button>
 
         <!-- Button trigger modal -->
-        <div class="col-lg-12 color2" id="cert">
+        <div class="col-lg-11 color2" id="cert">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
     Certificados
   </button>
@@ -77,7 +77,8 @@
     </div>
   </div>
 
-    <div class="col-lg-12 color2">
+    <div class="col lg 1"></div>
+    <div class="col-lg-11 color2">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
